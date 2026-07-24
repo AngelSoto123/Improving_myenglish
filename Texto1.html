@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Improving My Habits</title>
+
+<!-- Fuente -->
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#8EC5FF;
+    overflow-x:hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   BORDES COMIC
+========================= */
+
+.borde-izq,
+.borde-der{
+    position:fixed;
+    top:0;
+    width:220px;
+    height:100vh;
+    z-index:1;
+}
+
+/* BORDE IZQUIERDO */
+
+.borde-izq{
+    left:0;
+
+    background:
+    radial-gradient(circle, #000 8%, transparent 9%),
+    #f4b247;
+
+    background-size:35px 35px;
+
+    border-right:8px solid black;
+
+    box-shadow:8px 0px 0px black;
+}
+
+/* BORDE DERECHO */
+
+.borde-der{
+    right:0;
+
+    background:
+    linear-gradient(160deg,
+    #ff0000 0%,
+    #cc0000 100%);
+
+    border-left:8px solid black;
+
+    box-shadow:-8px 0px 0px black;
+
+    overflow:hidden;
+}
+
+/* Rayas comic */
+
+.borde-der::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+        -35deg,
+        rgba(0,0,0,0.45) 0px,
+        rgba(0,0,0,0.45) 6px,
+        transparent 6px,
+        transparent 60px
+    );
+}
+
+/* Puntos comic */
+
+.borde-der::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,255,255,0.25) 8%,
+    transparent 9%);
+
+    background-size:45px 45px;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.contenedor{
+    position:relative;
+    z-index:2;
+
+    width:65%;
+    margin:40px auto;
+    padding:50px;
+
+    background:white;
+
+    border:8px solid black;
+    border-radius:25px;
+
+    box-shadow:15px 15px 0px black;
+}
+
+/* =========================
+   AUDIO
+========================= */
+
+.audio-box{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+audio{
+    width:400px;
+
+    border:4px solid black;
+    border-radius:15px;
+
+    box-shadow:6px 6px 0px black;
+}
+
+/* =========================
+   TEXTO
+========================= */
+
+.texto{
+    font-family:'Sniglet', cursive;
+    color:black;
+    font-size:33px;
+    line-height:1.7;
+    text-align:center;
+}
+
+/* TITULO */
+
+.texto h1{
+
+    font-family:'Sniglet', cursive;
+
+    font-size:60px;
+    margin-bottom:40px;
+
+    color:#000;
+
+    text-shadow:
+    4px 4px 0px #00000;
+}
+
+/* PARRAFOS */
+
+.texto p{
+
+    margin-bottom:60px;
+
+    background:#fff6d5;
+
+    padding:25px;
+
+    border:5px solid black;
+
+    border-radius:20px;
+
+    box-shadow:8px 8px 0px black;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+    .borde-izq,
+    .borde-der{
+        width:120px;
+    }
+
+    .contenedor{
+        width:80%;
+    }
+
+}
+
+@media(max-width:900px){
+
+    .borde-izq,
+    .borde-der{
+        display:none;
+    }
+
+    .contenedor{
+        width:92%;
+        padding:25px;
+    }
+
+    .texto{
+        font-size:22px;
+    }
+
+    .texto h1{
+        font-size:40px;
+    }
+
+    audio{
+        width:100%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BORDE IZQUIERDO -->
+<div class="borde-izq"></div>
+
+<!-- BORDE DERECHO -->
+<div class="borde-der"></div>
+
+<!-- CONTENIDO -->
+<div class="contenedor">
+
+ <!-- AUDIO -->
+<div class="audio-box">
+
+    <!-- CAMBIA "tu-audio.mp3" POR EL NOMBRE DE TU AUDIO -->
+    
+    <audio controls>
+        <source src="Texto%201.mp3.mpeg" type="audio/mpeg">
+    </audio>
+
+</div>
+
+    <!-- TEXTO -->
+    <div class="texto">
+
+        <h1>Improving My Habits</h1>
+
+        <p>
+            Last year, I decided to change some habits in my life.
+            I started waking up earlier, exercising three times
+            a week, and spending less time on social media.
+            At first, it was difficult because I was used to
+            staying up late and wasting a lot of time online.
+            However, after a few weeks, I noticed that I had
+            more energy and felt more focused during the day.
+        </p>
+
+        <p>
+            One of the biggest changes was reading more books
+            in English. This helped me improve my vocabulary
+            and understand new expressions. I also began
+            listening to podcasts and watching videos without
+            subtitles. Sometimes I did not understand everything,
+            but I continued practicing every day.
+        </p>
+        
+        <p>Now, I feel more confident when I speak English and I am motivated to keep improving. I learned that small changes can make a big difference if you stay consistent and patient.</p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

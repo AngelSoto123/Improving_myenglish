@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Improving My Habits</title>
+
+<!-- Fuente -->
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#8EC5FF;
+    overflow-x:hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   BORDES COMIC
+========================= */
+
+.borde-izq,
+.borde-der{
+    position:fixed;
+    top:0;
+    width:220px;
+    height:100vh;
+    z-index:1;
+}
+
+/* BORDE IZQUIERDO */
+
+.borde-izq{
+    left:0;
+
+    background:
+    radial-gradient(circle, #000 8%, transparent 9%),
+    #f4b247;
+
+    background-size:35px 35px;
+
+    border-right:8px solid black;
+
+    box-shadow:8px 0px 0px black;
+}
+
+/* BORDE DERECHO */
+
+.borde-der{
+    right:0;
+
+    background:
+    linear-gradient(160deg,
+    #ff0000 0%,
+    #cc0000 100%);
+
+    border-left:8px solid black;
+
+    box-shadow:-8px 0px 0px black;
+
+    overflow:hidden;
+}
+
+/* Rayas comic */
+
+.borde-der::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+        -35deg,
+        rgba(0,0,0,0.45) 0px,
+        rgba(0,0,0,0.45) 6px,
+        transparent 6px,
+        transparent 60px
+    );
+}
+
+/* Puntos comic */
+
+.borde-der::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,255,255,0.25) 8%,
+    transparent 9%);
+
+    background-size:45px 45px;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.contenedor{
+    position:relative;
+    z-index:2;
+
+    width:65%;
+    margin:40px auto;
+    padding:50px;
+
+    background:white;
+
+    border:8px solid black;
+    border-radius:25px;
+
+    box-shadow:15px 15px 0px black;
+}
+
+/* =========================
+   AUDIO
+========================= */
+
+.audio-box{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+audio{
+    width:400px;
+
+    border:4px solid black;
+    border-radius:15px;
+
+    box-shadow:6px 6px 0px black;
+}
+
+/* =========================
+   TEXTO
+========================= */
+
+.texto{
+    font-family:'Sniglet', cursive;
+    color:black;
+    font-size:33px;
+    line-height:1.7;
+    text-align:center;
+}
+
+/* TITULO */
+
+.texto h1{
+
+    font-family:'Sniglet', cursive;
+
+    font-size:60px;
+    margin-bottom:40px;
+
+    color:#000;
+
+    text-shadow:
+    4px 4px 0px #00000;
+}
+
+/* PARRAFOS */
+
+.texto p{
+
+    margin-bottom:60px;
+
+    background:#fff6d5;
+
+    padding:25px;
+
+    border:5px solid black;
+
+    border-radius:20px;
+
+    box-shadow:8px 8px 0px black;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+    .borde-izq,
+    .borde-der{
+        width:120px;
+    }
+
+    .contenedor{
+        width:80%;
+    }
+
+}
+
+@media(max-width:900px){
+
+    .borde-izq,
+    .borde-der{
+        display:none;
+    }
+
+    .contenedor{
+        width:92%;
+        padding:25px;
+    }
+
+    .texto{
+        font-size:22px;
+    }
+
+    .texto h1{
+        font-size:40px;
+    }
+
+    audio{
+        width:100%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BORDE IZQUIERDO -->
+<div class="borde-izq"></div>
+
+<!-- BORDE DERECHO -->
+<div class="borde-der"></div>
+
+<!-- CONTENIDO -->
+<div class="contenedor">
+
+ <!-- AUDIO -->
+<div class="audio-box">
+
+    <!-- CAMBIA "tu-audio.mp3" POR EL NOMBRE DE TU AUDIO -->
+    
+    <audio controls>
+        <source src="Audio1-motivation.mp4" type="audio/mpeg">
+    </audio>
+
+</div>
+
+    <!-- TEXTO -->
+    <div class="texto">
+
+        <h1>Never Giving Up</h1>
+
+        <p>
+          Michael was a boy who lived in a small town near the mountains. He was quiet, kind, and hardworking, but he often doubted himself. At school, many students were confident and talented, while Michael usually stayed in the background. He loved drawing and dreamed of becoming an artist one day, but he was afraid that people would laugh at his work.
+        </p>
+
+        <p>
+          Every morning, Michael woke up early and walked to school with his headphones on. Music helped him relax and forget his worries for a while. During classes, he listened carefully to the teachers and completed all his assignments, but he rarely spoke in front of others. One afternoon, his art teacher, Mrs. Green, announced an important competition. There would be a regional art contest, and the winner would receive a scholarship for a summer art program in the city. The classroom immediately became noisy because many students sounded excited, but Michael stayed silent. He wanted to participate, yet fear filled his mind. He thought that his drawings were not good enough.
+
+        </p>
+        
+       
+         <p>
+         After class, Mrs. Green stopped him before he left the room. She told him that he should join the competition because she believed in his talent. Michael looked surprised and answered that he did not think he was talented enough. Mrs. Green smiled kindly and explained that talent was important, but effort and passion were even more important. Michael thanked her, but he still felt uncertain about himself.
+        </p>
+        
+         <p>
+         That evening, he sat in his room looking at his sketchbook. It was full of drawings of landscapes, people, and animals. Drawing always made him feel calm and happy, but he had never shown most of his work to anyone. His younger sister, Lily, entered the room quietly and looked at the drawings. She told him that his drawings were amazing. Michael smiled a little and thanked her, but he repeated that he was not good enough for the contest. Lily crossed her arms and asked him how he would know if he never tried. Her words stayed in Michael’s mind all night.
+        </p>
+        
+         <p>
+         The next morning, Michael made a decision. Before school started, he walked to Mrs. Green’s classroom and told her that he wanted to join the competition. Mrs. Green looked very happy and congratulated him for making that choice. For the next few weeks, Michael worked harder than ever before. Every afternoon after school, he practiced drawing for hours. Sometimes he drew the mountains near his town, and other times he created portraits of people from his imagination.
+
+        </p>
+        
+         <p>
+         At first, things were difficult. Some drawings did not look the way he wanted, and he became frustrated many times. One evening, he even threw a pencil across the room because he felt angry and disappointed. His father heard the noise and entered the room to ask what was wrong. Michael explained how stressed and discouraged he felt. His father sat beside him and shared a story from his own youth. He explained that he once wanted to become a soccer player and practiced every day, but he failed many times before improving. He told Michael that success does not happen immediately and that people grow by making mistakes. The important thing, he said, was to continue trying.
+        </p>
+        
+         <p>
+         Those words gave Michael new motivation. Slowly, he started improving. He learned new techniques, added more details to his drawings, and became more confident in his abilities. Mrs. Green also helped him after school by giving advice and encouraging him to believe in himself. One day, Michael finally decided what he wanted to create for the competition. He chose to draw a large picture of a young boy standing on top of a mountain at sunrise. The boy looked small compared to the huge mountains around him, but he stood proudly and bravely. For Michael, the drawing represented courage and hope.
+
+        </p>
+        
+         <p>
+         During the final week before the competition, he worked on the drawing every evening. Sometimes he stayed awake late because he wanted every detail to be perfect. Finally, the day of the contest arrived. Michael felt nervous when he entered the large art hall in the city. There were many talented students from different schools. Some paintings looked incredibly professional, and Michael immediately began doubting himself again. He thought that maybe he was not good enough to be there. Then he remembered his father’s words about continuing even when things became difficult.
+        </p>
+        
+         <p>
+         He took a deep breath and placed his artwork in the exhibition area. After that, everyone waited while the judges examined the projects. The hours felt very long. Michael walked around the hall looking at the other drawings and paintings. Instead of feeling jealous, he felt inspired by the creativity around him. Later in the afternoon, the judges finally announced the winners. Michael did not expect anything because he only wanted to gain experience and prove to himself that he could try something difficult.
+        </p>
+        
+        <p>
+        When the announcer said that first place went to Michael Turner for his artwork called Rising Above, Michael could not believe it. For a moment, he was completely shocked. The audience clapped loudly while Mrs. Green smiled proudly in the crowd. Michael walked slowly to the stage to receive his award. When he looked at the audience, he realized something important. Winning felt wonderful, but the greatest achievement was not the trophy or the scholarship. The greatest achievement was overcoming his fear and believing in himself.
+
+        </p>
+        
+        <p>
+        That night, his family celebrated together at home with pizza and cake. Lily laughed and reminded him that she had told him to try. Michael smiled and admitted that she was right. A few weeks later, he started the summer art program in the city. He met new friends who shared the same passion for art, and for the first time in his life, he truly believed in his abilities. He still had moments of doubt sometimes, but now he understood that fear should never stop a person from following their dreams.
+        </p>
+        
+        <p>
+        Michael learned that success is not about being perfect from the beginning. It is about working hard, learning from mistakes, and continuing even when things become difficult. From that experience, he discovered an important truth: many people fail not because they are untalented, but because they give up too early. Years later, Michael kept the drawing of the boy on the mountain hanging on his wall. Every time he looked at it, he remembered the lesson that changed his life forever. Never give up on your dreams, because courage and persistence can take you higher than you ever imagined.
+        </p>
+        
+       
+
+    </div>
+
+</div>
+
+</body>
+</html>

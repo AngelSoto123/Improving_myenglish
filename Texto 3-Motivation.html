@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Improving My Habits</title>
+
+<!-- Fuente -->
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#8EC5FF;
+    overflow-x:hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   BORDES COMIC
+========================= */
+
+.borde-izq,
+.borde-der{
+    position:fixed;
+    top:0;
+    width:220px;
+    height:100vh;
+    z-index:1;
+}
+
+/* BORDE IZQUIERDO */
+
+.borde-izq{
+    left:0;
+
+    background:
+    radial-gradient(circle, #000 8%, transparent 9%),
+    #f4b247;
+
+    background-size:35px 35px;
+
+    border-right:8px solid black;
+
+    box-shadow:8px 0px 0px black;
+}
+
+/* BORDE DERECHO */
+
+.borde-der{
+    right:0;
+
+    background:
+    linear-gradient(160deg,
+    #ff0000 0%,
+    #cc0000 100%);
+
+    border-left:8px solid black;
+
+    box-shadow:-8px 0px 0px black;
+
+    overflow:hidden;
+}
+
+/* Rayas comic */
+
+.borde-der::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+        -35deg,
+        rgba(0,0,0,0.45) 0px,
+        rgba(0,0,0,0.45) 6px,
+        transparent 6px,
+        transparent 60px
+    );
+}
+
+/* Puntos comic */
+
+.borde-der::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,255,255,0.25) 8%,
+    transparent 9%);
+
+    background-size:45px 45px;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.contenedor{
+    position:relative;
+    z-index:2;
+
+    width:65%;
+    margin:40px auto;
+    padding:50px;
+
+    background:white;
+
+    border:8px solid black;
+    border-radius:25px;
+
+    box-shadow:15px 15px 0px black;
+}
+
+/* =========================
+   AUDIO
+========================= */
+
+.audio-box{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+audio{
+    width:400px;
+
+    border:4px solid black;
+    border-radius:15px;
+
+    box-shadow:6px 6px 0px black;
+}
+
+/* =========================
+   TEXTO
+========================= */
+
+.texto{
+    font-family:'Sniglet', cursive;
+    color:black;
+    font-size:33px;
+    line-height:1.7;
+    text-align:center;
+}
+
+/* TITULO */
+
+.texto h1{
+
+    font-family:'Sniglet', cursive;
+
+    font-size:60px;
+    margin-bottom:40px;
+
+    color:#000;
+
+    text-shadow:
+    4px 4px 0px #00000;
+}
+
+/* PARRAFOS */
+
+.texto p{
+
+    margin-bottom:60px;
+
+    background:#fff6d5;
+
+    padding:25px;
+
+    border:5px solid black;
+
+    border-radius:20px;
+
+    box-shadow:8px 8px 0px black;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+    .borde-izq,
+    .borde-der{
+        width:120px;
+    }
+
+    .contenedor{
+        width:80%;
+    }
+
+}
+
+@media(max-width:900px){
+
+    .borde-izq,
+    .borde-der{
+        display:none;
+    }
+
+    .contenedor{
+        width:92%;
+        padding:25px;
+    }
+
+    .texto{
+        font-size:22px;
+    }
+
+    .texto h1{
+        font-size:40px;
+    }
+
+    audio{
+        width:100%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BORDE IZQUIERDO -->
+<div class="borde-izq"></div>
+
+<!-- BORDE DERECHO -->
+<div class="borde-der"></div>
+
+<!-- CONTENIDO -->
+<div class="contenedor">
+
+ <!-- AUDIO -->
+<div class="audio-box">
+
+    <!-- CAMBIA "tu-audio.mp3" POR EL NOMBRE DE TU AUDIO -->
+    
+    <audio controls>
+        <source src="AudioTexto3.m4a.mp4" type="audio/mpeg">
+    </audio>
+
+</div>
+
+    <!-- TEXTO -->
+    <div class="texto">
+
+        <h1>Learning a New Language</h1>
+
+        <p>
+         Daniel was a boy who lived in a small town with his parents and his older sister. He was a quiet and intelligent student, but there was one subject that always made him nervous: English. Every time his English teacher asked him to read or speak in class, Daniel felt embarrassed and uncomfortable. He believed that his pronunciation was terrible and that everyone would laugh at him if he made mistakes.
+        </p>
+
+        <p>
+         Because of those fears, Daniel avoided speaking English whenever possible. During class activities, he usually stayed silent while other students answered questions. He completed his homework, but he never felt confident about it. His grades were average, and he thought that learning English was simply too difficult for him.
+
+        </p>
+        
+        <p>
+        One afternoon, Daniel arrived home feeling frustrated after an English exam. He threw his backpack onto the sofa and sighed loudly. His older sister, Sofia, noticed his expression and asked what had happened. Daniel explained that he had studied for many hours but still could not understand some parts of the test. He said that English was impossible for him.
+        </p>
+       
+         <p>
+        Sofia smiled and sat beside him. She reminded Daniel that she had also struggled with English when she was younger. However, she explained that things changed when she stopped being afraid of making mistakes. She told him that learning a language takes time, patience, and practice.
+       
+        </p>
+        
+         <p>
+        Daniel listened carefully, but he still felt discouraged. He quietly asked what would happen if he never became good at English. Sofia answered that he would improve little by little because nobody becomes fluent in one day.
+      
+        </p>
+        
+         <p>
+        That night, Daniel thought deeply about her words. He realized that he had spent more time worrying about mistakes than actually practicing. For the first time, he decided that he wanted to change his attitude.
+
+        </p>
+        
+         <p>
+        The next morning at school, Daniel paid more attention during English class. His teacher, Mrs. Brown, noticed that he looked more focused than usual. At the end of the lesson, she announced that the school would organize an English speaking club every Wednesday afternoon for students who wanted extra practice.
+       
+       
+        </p>
+        
+         <p>
+        Normally, Daniel would have ignored the invitation, but this time he decided to join.
+      
+        </p>
+        
+         <p>
+        On the first day of the club, Daniel felt extremely nervous. There were about fifteen students in the classroom, and many of them already spoke English confidently. Daniel wanted to leave, but Mrs. Brown welcomed everyone warmly and explained that the club was a place for learning, not for judging others.
+        
+        </p>
+        
+         <p>
+        The first activity was simple. Each student had to introduce themselves in English and talk about their hobbies. When it was Daniel’s turn, his hands were shaking slightly. He spoke slowly and made several mistakes, but nobody laughed at him. In fact, the other students listened respectfully.
+       
+        </p>
+        
+        <p>
+        After the activity, Mrs. Brown smiled and told Daniel that he had done well. For the first time, he felt a little more comfortable speaking English.
+        
+        </p>
+        
+        <p>
+        Over the next few months, Daniel attended the English club every week. At first, progress felt slow, but little by little, he improved. He started learning new vocabulary, understanding grammar better, and speaking more naturally.
+       
+        </p>
+        
+        <p>
+        Daniel also changed some of his daily habits. Instead of watching television only in Spanish, he began watching movies and videos in English with subtitles. He listened to English music while doing homework and tried to understand the lyrics. Sometimes he repeated sentences aloud to practice pronunciation.
+       
+        </p>
+        
+         <p>
+        At first, many words sounded strange and confusing, but Daniel refused to give up. He understood that mistakes were part of the learning process.
+       
+         </p>
+        
+          <p>
+        One day, Mrs. Brown gave the class an assignment to prepare a short presentation in English about their future dreams. In the past, Daniel would have been terrified by such an activity. However, this time he decided to challenge himself.
+        
+         </p>
+        
+          <p>
+        He spent several days preparing his presentation carefully. He practiced in front of the mirror many times and even asked Sofia to listen to him at home. Although he still felt nervous, he was more prepared than before.
+        
+          </p>
+        
+          <p>
+        When the day of the presentations arrived, Daniel’s heart beat quickly as he stood in front of the class. He took a deep breath and began speaking. He talked about his dream of becoming a graphic designer and traveling to different countries in the future.
+        
+         </p>
+        
+          <p>
+        During the presentation, he made a few small mistakes, but he continued speaking without stopping. When he finished, the classroom filled with applause.
+        
+         </p>
+        
+          <p>
+        Mrs. Brown looked very proud and congratulated him for his excellent progress.
+        
+         </p>
+        
+          <p>
+        At that moment, Daniel realized how much he had improved. A few months earlier, he could barely speak a few sentences in English without feeling embarrassed. Now he was standing in front of the entire class giving a presentation.
+       
+         </p>
+        
+          <p>
+        That experience gave him confidence and motivation to continue learning.
+       
+         </p>
+        
+          <p>
+        As time passed, Daniel discovered that English was opening new opportunities in his life. He started following international artists and creators online, reading articles in English, and communicating with people from other countries through social media. He realized that English was not just another school subject. It was a tool that connected people from different cultures and places.
+        
+         </p>
+        
+          <p>
+        One afternoon, Daniel met a tourist family while helping his father at a small restaurant in town. The family spoke English and needed help understanding the menu. Normally, Daniel would have avoided the conversation, but this time he decided to try.
+       
+          </p>
+        
+          <p>
+        At first, he felt nervous, but soon he started speaking naturally. He explained the dishes, answered their questions, and even recommended some local food. The family thanked him warmly and complimented his English.
+        
+         </p>
+        
+          <p>
+        After they left, Daniel felt incredibly happy. It was the first time he had used English in a real-life situation outside school.
+       
+         </p>
+        
+           <p>
+        That moment changed his perspective completely. He understood that learning English was not only about passing exams or getting good grades. It was about communication, opportunities, and personal growth.
+      
+       
+         </p>
+           <p>
+        From then on, Daniel studied English with a different attitude. Instead of seeing it as something difficult and stressful, he saw it as an exciting challenge. He still made mistakes sometimes, but he no longer felt ashamed of them.
+      
+       
+         </p>
+           <p>
+        Months later, Daniel’s grades improved significantly. More importantly, his confidence grew stronger every day. His classmates noticed the difference, and some even asked him for advice about learning English.
+      
+       
+         </p>
+           <p>
+        Daniel always gave the same answer: “Don’t be afraid of mistakes.”
+      
+       
+         </p>
+           <p>
+        He learned that many people fail to learn a language because they are too afraid of sounding imperfect. However, mistakes are necessary for improvement. Every conversation, every new word, and every small effort helps a person grow.
+      
+       
+         </p>
+           <p>
+        Years later, Daniel still remembered the moment he decided to stop being afraid. It was not the easiest path, and there were many moments of frustration, but every step was worth it.
+      
+       
+         </p>
+           <p>
+        Learning English changed his life in many ways. It gave him confidence, new friendships, and opportunities he had never imagined before. Most importantly, it taught him an important lesson that he would always remember: progress happens when people leave their comfort zones and continue trying even when things feel difficult.
+      
+       
+         </p>
+           <p>
+        Daniel’s story shows that learning a language is not about being perfect from the beginning. It is about courage, patience, and persistence. Anyone can improve if they believe in themselves and practice consistently. Sometimes the biggest obstacle is not the language itself, but the fear inside our minds.
+      
+       
+         </p>
+        
+        <p>
+        In the end, Daniel discovered that learning English was not only about understanding another language. It was also about discovering a stronger and more confident version of himself.
+        </p>
+        
+        
+       
+
+    </div>
+
+</div>
+
+</body>
+</html>

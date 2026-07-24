@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Improving My English</title>
+
+  <!-- Fuente Changa One -->
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#ececec;
+      font-family: Arial, sans-serif;
+    }
+
+    /* =========================
+       BANNER
+    ========================= */
+
+    .banner{
+      width:100%;
+      background:#ffd900;
+      padding:40px 20px;
+      text-align:center;
+      box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .banner h1{
+      font-family:'Changa One', cursive;
+      font-size:90px;
+      color:black;
+      letter-spacing:3px;
+    }
+
+    /* =========================
+       CONTENIDO
+    ========================= */
+
+    .contenido{
+      width:92%;
+      margin:40px auto;
+    }
+
+    .subtitulo{
+      font-family:'Changa One', cursive;
+      font-size:45px;
+      color:black;
+      margin-bottom:30px;
+      margin-top:50px;
+    }
+
+    /* =========================
+       GALERÍA
+    ========================= */
+
+    .galeria{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:25px;
+      margin-bottom:40px;
+    }
+
+    /* TARJETAS */
+
+    .card{
+      background:white;
+      border:5px solid black;
+      border-radius:12px;
+      overflow:hidden;
+      height:500px;
+      transition:0.3s;
+      box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    /* Quitar subrayado de enlaces */
+
+    .card-link{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media(max-width:1100px){
+
+      .galeria{
+        grid-template-columns:repeat(2, 1fr);
+      }
+
+      .banner h1{
+        font-size:60px;
+      }
+
+    }
+
+    @media(max-width:700px){
+
+      .galeria{
+        grid-template-columns:1fr;
+      }
+
+      .banner h1{
+        font-size:40px;
+      }
+
+      .subtitulo{
+        font-size:30px;
+      }
+
+      .card{
+        height:400px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1>IMPROVING MY ENGLISH</h1>
+  </div>
+
+  <!-- Contenido -->
+  <div class="contenido">
+
+    <!-- =========================
+         PRACTICE
+    ========================= -->
+
+    <div class="subtitulo">Practice</div>
+
+    <div class="galeria">
+
+      <!-- TARJETA 1 -->
+      <a href="Texto1.html" class="card-link">
+
+        <div class="card">
+          <img src="imagen1.jpg" alt="Imagen 1">
+        </div>
+
+      </a>
+
+      <!-- TARJETA 2 -->
+      <a href="Texto2.html" class="card-link">
+
+        <div class="card">
+          <img src="imagen2.jpg" alt="Imagen 2">
+        </div>
+
+      </a>
+
+      <!-- TARJETA 3 -->
+      <a href="Texto3.html" class="card-link">
+
+        <div class="card">
+          <img src="imagen3.jpg" alt="Imagen 3">
+        </div>
+
+      </a>
+
+      <!-- TARJETA 4 -->
+      <a href="Texto4.html" class="card-link">
+
+        <div class="card">
+          <img src="imagen4.jpg" alt="Imagen 4">
+        </div>
+
+      </a>
+
+    </div>
+
+    <!-- =========================
+         MOTIVATION
+    ========================= -->
+
+    <div class="subtitulo">Motivation</div>
+
+    <div class="galeria">
+
+      <!-- TARJETA 5 -->
+      <a href="Texto1-Motivation.html" class="card-link">
+
+        <div class="card">
+          <img src="motivation1.jpg" alt="Motivation 1">
+        </div>
+
+      </a>
+
+      <!-- TARJETA 6 -->
+      <a href="Texto%202-Motivation.html" class="card-link">
+
+        <div class="card">
+          <img src="motivation2.jpg" alt="Motivation 2">
+        </div>
+
+      </a>
+
+      <!-- TARJETA 7 -->
+      <a href="Texto%203-Motivation.html" class="card-link">
+
+        <div class="card">
+          <img src="motivation3.jpg" alt="Motivation 3">
+        </div>
+
+      </a>
+
+      <!-- TARJETA 8 -->
+      <a href="Texto%204-Motivation.html" class="card-link">
+
+        <div class="card">
+          <img src="motivation4.jpg" alt="Motivation 4">
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
